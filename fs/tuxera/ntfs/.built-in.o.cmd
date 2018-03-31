@@ -1,0 +1,1 @@
+cmd_fs/tuxera/ntfs/built-in.o :=  rm -f fs/tuxera/ntfs/built-in.o; ccache /home/ban_feng/Codebase/Intel/l-mr1-r2_cht_hr/out/host/linux-x86/poky/sysroots/x86_64-pokysdk-linux/usr/bin/x86_64-poky-linux/x86_64-poky-linux-ar rcsD fs/tuxera/ntfs/built-in.o

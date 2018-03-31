@@ -1,0 +1,1 @@
+cmd_fs/tuxera/ntfs/tntfs.ko := ccache /home/ban_feng/Codebase/Intel/l-mr1-r2_cht_hr/out/host/linux-x86/poky/sysroots/x86_64-pokysdk-linux/usr/bin/x86_64-poky-linux/x86_64-poky-linux-ld -r -m elf_x86_64 -T /home/ban_feng/Codebase/Intel/l-mr1-r2_cht_hr/kernel/cht/scripts/module-common.lds --build-id  -o fs/tuxera/ntfs/tntfs.ko fs/tuxera/ntfs/tntfs.o fs/tuxera/ntfs/tntfs.mod.o

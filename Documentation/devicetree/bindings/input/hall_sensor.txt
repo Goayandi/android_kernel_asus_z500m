@@ -1,0 +1,38 @@
+Hall sensor driver
+
+Hall sensor is a switch. It senses magnetic field change and trigger interrupts to cpu.
+
+Required properties:
+
+ - compatible	: Should be "asustek_lid".
+ - gpios	: Irq gpio which is to provide interrupts to host.
+		Eg: <&pio 0 0>
+			<[phandle of the gpio controller node]
+			 [line number within the gpio controller]
+			 [flags]>
+
+		Values for gpio specifier:
+			- Line number: is a value between 0 to 202.
+			- Flags:  bit field of flags, as defined in <dt-bindings/gpio/gpio.h>.
+		Only the following flags are supported:
+			0 - GPIO_ACTIVE_HIGH
+			1 - GPIO_ACTIVE_LOW
+
+Optional properties:
+
+ - asustek_lid,wakeup	: Boolean to select interrupt wakeup or not, if this property is defined
+				device will wakeup system.
+
+Example:
+
+#include "mt8173_plus.dtsi"
+#include <dt-bindings/pinctrl/mt6397-pinfunc.h>
+
+...
+{
+	asustek_lid {
+		compatible = "asustek_lid";
+		gpios = <&pio 0 0>;
+		asustek_lid,wakeup;
+	};
+};
